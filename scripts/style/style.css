@@ -1,0 +1,140 @@
+.AccountForm {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 75%;
+    height: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    justify-content: center;
+}
+
+.AccountForm > * {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    font-size: 1em;
+}
+
+.Chats {
+    display: flex;
+    flex-direction: column;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 20em;
+
+    background-color: rgba(20, 20, 20, 0.5);
+    backdrop-filter: blur(2px);
+    box-sizing: border-box;
+    border-right: 2px solid rgb(50, 50, 50);
+
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.Chats > div:nth-child(even) {
+    background-color: rgb(50, 50, 50);
+}
+
+.Chats > div:nth-child(odd) {
+    background-color: rgb(70, 70, 70);
+}
+
+.Chats > div {
+    width: 100%;
+    height: 2em;
+    
+    color: rgb(255, 255, 255);
+
+    font-weight: 600;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1em;
+
+    cursor: pointer;
+}
+
+.Chats > div:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.Chats > div:first-child {
+    justify-content: space-between;
+    background-color: rgb(70, 70, 70) !important;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.Chats > div:first-child > *:last-child {
+    margin-right: 2em;
+}
+
+div:has(.Messages) {
+    position: absolute;
+    left: 20em;
+    top: 0;
+    height: 100%;
+    width: calc(100% - 20em);
+}
+
+div:has(.Messages) > div:last-child {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3em;
+}
+
+div:has(.Messages) > div:last-child > input {
+    width: 100%;
+    height: 100%;
+    
+    border-radius: 0;
+    background-color: rgba(20, 20, 20, 0.5);
+    color: rgb(255, 255, 255);
+
+    box-sizing: border-box;
+    border-top: 2px solid rgb(50, 50, 50);
+
+    font-weight: 600;
+}
+
+.Messages {
+    display: flex;
+    flex-direction: column;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.Messages > div {
+    width: 100%;
+    min-height: 2em;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 1em;
+    
+    background-color: rgba(75, 75, 175, 0.5);
+}
+
+.Messages > div[client="true"] {
+    background-color: rgba(175, 75, 75, 0.5);
+}
+
+.Messages > div[info="true"] {
+    background-color: rgba(175, 175, 175, 0.5);
+}
