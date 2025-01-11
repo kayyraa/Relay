@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="scripts/style/format.css">
+        <link rel="stylesheet" href="scripts/style/style.css">
+        
+        <script type="module" src="scripts/api.js"></script>
+        <script type="module" src="scripts/hud.js"></script>
+        <script type="module" src="scripts/chats.js"></script>
+        
+        <title>Relay</title>
+    </head>
+    <body>
+        <topbar>
+            <header class="Logo">Relay</header>
+            <span class="LogInButton" onclick="location.href = './account.html'" button>Log In</span>
+        </topbar>
+        <content>
+            <div class="Chats">
+                <div><input class="NewChatInput" placeholder="Username" type="text"><button class="NewChatButton">Chat</button></div>
+                <div onclick="location.href = '../profile.html'" class="Navigator">
+                    <span class="UsernameLabel">Username</span>
+                    <span class="TagLabel">#0001</span>
+                    <img class="ProfileImage" src="images/Default.svg">
+                </div>
+            </div>
+            <div>
+                <div class="Messages"></div>
+                <div class="Input"><input class="MessageInput" type="text"></input></div>
+            </div>
+        </content>
+        <div class="Media" style="display: none;">
+            <button class="CloseButton">X</button>
+            <img>
+            <video controls></video>
+            <audio controls></audio>
+        </div>
+    </body>
+</html>
