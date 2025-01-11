@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+body {
+    background-color: rgb(40, 40, 40);
+    color: rgb(255, 255, 255);
+    overflow: hidden;
+}
+
+* {
+    font-family: "IBM Plex Sans";
+    transition: all 0.25s ease;
+}
+
+input {
+    outline: none;
+    border: none;
+
+    border-radius: 8px;
+    padding-left: 1em;
+}
+
+button {
+    outline: none;
+    border: none;
+
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+
+    padding-left: 1em;
+    padding-right: 1em;
+    
+    border-radius: 8px;
+
+    font-weight: 600;
+    cursor: pointer;
+}
+
+span[button] {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+
+    padding-left: 1em;
+    padding-right: 1em;
+    
+    border-radius: 8px;
+
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button:hover,
+span[button]:hover {
+    background-color: rgb(200, 200, 200);
+}
+
+nch {
+    font-size: 12px;
+    opacity: 0.25;
+}
+
+topbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 2em;
+
+    background-color: rgba(20, 20, 20, 0.5);
+    backdrop-filter: blur(2px);
+    box-sizing: border-box;
+    border-bottom: 2px solid rgb(50, 50, 50);
+}
+
+topbar > * {
+    font-size: 14px;
+}
+
+topbar > *:first-child {
+    margin-left: 1em;
+}
+
+topbar > *:last-child {
+    margin-right: 1em;
+}
+
+content {
+    position: absolute;
+    left: 0;
+    top: 2em;
+    width: 100%;
+    height: calc(100% - 2em);
+}
+
+i {
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    height: 1em;
+    width: 1em;
+    background-color: #fff;
+    animation: Spin 1s ease infinite;
+    transition: all 0.5s ease;
+}
+
+i:before,
+i:after {
+    content: '';
+    position: absolute;
+    height: 1em;
+    width: 1em;
+    background: inherit;
+    animation: Spin 1s ease infinite;
+}
+
+i:before {
+    left: -2em;
+}
+
+i:after {
+    left: 2em;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+}
+
+@keyframes Spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
